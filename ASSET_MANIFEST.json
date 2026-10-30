@@ -1,0 +1,245 @@
+{
+  "schemaVersion": "1.0",
+  "project": "Animated E-commerce Puffer Jacket Product Page",
+  "manifestStatus": "verified-production-bundle",
+  "importantNote": "All included paths have been verified inside animated-ecommerce-3d-assets.zip. models/puffer-jacket-source.blend is marked not-produced as Blender CLI is unavailable in the build VM; models/puffer-jacket.glb is a verified, true 3D glTF 2.0 binary mesh (54,000 vertices, 105,938 triangles).",
+  "reference": {
+    "durationSeconds": 18.737098,
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "frameCount": 558
+  },
+  "variants": [
+    {
+      "id": "orange",
+      "label": "Orange",
+      "environmentHex": "#F5795D",
+      "cardHex": "#D14722",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-orange-transparent.webp",
+      "baseColorTexturePath": "textures/puffer-orange-basecolor.webp",
+      "materialName": "Puffer_Orange",
+      "khrMaterialsVariantIndex": 0,
+      "status": "included"
+    },
+    {
+      "id": "olive",
+      "label": "Olive / Brown",
+      "environmentHex": "#79642F",
+      "cardHex": "#4A3B1C",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-olive-transparent.webp",
+      "baseColorTexturePath": "textures/puffer-olive-basecolor.webp",
+      "materialName": "Puffer_Olive",
+      "khrMaterialsVariantIndex": 1,
+      "status": "included"
+    },
+    {
+      "id": "pearl",
+      "label": "Pearl / Silver",
+      "environmentHex": "#D3ABDE",
+      "cardHex": "#AC8FBB",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-pearl-transparent.webp",
+      "baseColorTexturePath": "textures/puffer-pearl-basecolor.webp",
+      "materialName": "Puffer_Pearl",
+      "khrMaterialsVariantIndex": 2,
+      "status": "included"
+    }
+  ],
+  "assets": [
+    {
+      "id": "jacket-model",
+      "path": "models/puffer-jacket.glb",
+      "kind": "glb-model",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural 3D Asset)",
+      "notes": "True glTF 2.0 binary mesh (54,000 vertices, 105,938 triangles) with 5 embedded 1024x1024 textures and KHR_materials_variants for orange, olive, and pearl.",
+      "fileSizeBytes": 6422036,
+      "sha256": "408e4a29c58adf10ebcc4fd47fb1b2defbbf9690972d3bce48f133fe46d9c839",
+      "vertexCount": 54000,
+      "triangleCount": 105938
+    },
+    {
+      "id": "jacket-source",
+      "path": "models/puffer-jacket-source.blend",
+      "kind": "editable-source",
+      "required": false,
+      "status": "not-produced",
+      "license": "not-applicable",
+      "notes": "Blender binary (.blend) was not produced because the Blender CLI binary is not installed in the generation environment; the mesh and materials were authored directly into glTF 2.0 binary (models/puffer-jacket.glb) via our parametric Python 3D surface pipeline."
+    },
+    {
+      "id": "orange-basecolor-texture",
+      "path": "textures/puffer-orange-basecolor.webp",
+      "kind": "texture-webp",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural Texture)",
+      "dimensions": "1024x1024",
+      "fileSizeBytes": 7954,
+      "sha256": "b7d0eacc67b68186495552d257848f82630cc367490505669b9551e8fed37cfb"
+    },
+    {
+      "id": "olive-basecolor-texture",
+      "path": "textures/puffer-olive-basecolor.webp",
+      "kind": "texture-webp",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural Texture)",
+      "dimensions": "1024x1024",
+      "fileSizeBytes": 6804,
+      "sha256": "46e2339a263056ab7a853eb8a5949a93fc5db93209383537d65927fb9e9b268b"
+    },
+    {
+      "id": "pearl-basecolor-texture",
+      "path": "textures/puffer-pearl-basecolor.webp",
+      "kind": "texture-webp",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural Texture)",
+      "dimensions": "1024x1024",
+      "fileSizeBytes": 6362,
+      "sha256": "ba0d510e4a6aecfcc55193b3689ce26a0ea91705f94daf44f3fcf97aec0acc28"
+    },
+    {
+      "id": "normal-texture",
+      "path": "textures/puffer-normal.webp",
+      "kind": "texture-webp",
+      "required": false,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural Texture)",
+      "dimensions": "1024x1024",
+      "notes": "Tangent-space normal map encoding ripstop nylon micro-grid and quilted baffle seam creases.",
+      "fileSizeBytes": 514018,
+      "sha256": "9b2ce6691c3dc67b5fa08aa60ba7b453118ae4a1c0b4c86b564c2259678ecce5"
+    },
+    {
+      "id": "orm-texture",
+      "path": "textures/puffer-orm.webp",
+      "kind": "texture-webp",
+      "required": false,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural Texture)",
+      "dimensions": "1024x1024",
+      "notes": "glTF-compliant packed Occlusion (R), Roughness (G), Metallic (B) map.",
+      "fileSizeBytes": 103352,
+      "sha256": "8838cdacf49f5bc112d8c04fb1c0dc1f2a8443e12e28bad693cecc28051801c6"
+    },
+    {
+      "id": "studio-hdr",
+      "path": "environment/studio-softbox.hdr",
+      "kind": "hdr-environment",
+      "required": false,
+      "status": "included",
+      "license": "CC0-1.0 (Original Procedural HDR)",
+      "dimensions": "512x256",
+      "notes": "32-bit Radiance RGBE equirectangular studio softbox environment map.",
+      "fileSizeBytes": 524382,
+      "sha256": "86444b40d853b0f2e5a21bb84b3976b3353e68bea197962ae68ea0559cb5120e"
+    },
+    {
+      "id": "orange-fallback",
+      "path": "fallback/puffer-orange-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Render)",
+      "dimensions": "1600x1600",
+      "fileSizeBytes": 317118,
+      "sha256": "bdaab938141470c8bb22957690267ac5f91d2f978e87f62686229692b6f90545"
+    },
+    {
+      "id": "olive-fallback",
+      "path": "fallback/puffer-olive-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Render)",
+      "dimensions": "1600x1600",
+      "fileSizeBytes": 297612,
+      "sha256": "81024f224eb5a6d7612eb9d22ef08831a3055a7e08851e61c4c21e4172c8e668"
+    },
+    {
+      "id": "pearl-fallback",
+      "path": "fallback/puffer-pearl-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Render)",
+      "dimensions": "1600x1600",
+      "fileSizeBytes": 184882,
+      "sha256": "ceb81c1ab8f5e9dd5391f0ded25c02a190f18a2e455e0cff0ba55cc1d1d5e7ff"
+    },
+    {
+      "id": "brand-mark",
+      "path": "ui/original-brand-mark.svg",
+      "kind": "svg",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Vector)",
+      "fileSizeBytes": 473,
+      "sha256": "20c974c45c43a361dad88a0f6c3be08da09521e72cdd518b5445d0e827605abb"
+    },
+    {
+      "id": "orbit-lines",
+      "path": "ui/orbit-lines.svg",
+      "kind": "svg",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Vector)",
+      "fileSizeBytes": 1605,
+      "sha256": "0b713f403e8ece7f4d266e5294bd5f6a9a1879a9d8ba237dd018ee7f9e3e9221"
+    },
+    {
+      "id": "variant-data",
+      "path": "data/product-variants.json",
+      "kind": "json",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Data)",
+      "fileSizeBytes": 3070,
+      "sha256": "5531728dad314dabada2a07ab6896f55f855149f24b565b601fd5a54b9e54227"
+    },
+    {
+      "id": "hero-front-preview",
+      "path": "previews/hero-front.png",
+      "kind": "preview-image",
+      "required": true,
+      "status": "included",
+      "license": "CC0-1.0 (Original Render)",
+      "dimensions": "1600x1600",
+      "fileSizeBytes": 415424,
+      "sha256": "89d47f85c8d527bec064121fbc569e05088f9cd82c3e2657c41e229a42e50060"
+    },
+    {
+      "id": "model-wireframe-preview",
+      "path": "previews/model-wireframe.png",
+      "kind": "preview-image",
+      "required": false,
+      "status": "included",
+      "license": "CC0-1.0 (Original Render)",
+      "dimensions": "1600x1600",
+      "fileSizeBytes": 1222711,
+      "sha256": "370573d56144a8a4c0eb0095923e47c573c662b19e2f8cfe215b8359a612e38d"
+    },
+    {
+      "id": "cc0-license-text",
+      "path": "third_party_licenses/LICENSE-CC0-1.0.txt",
+      "kind": "license-text",
+      "required": false,
+      "status": "included",
+      "license": "CC0-1.0",
+      "fileSizeBytes": 755,
+      "sha256": "716f3ec441cdbde5e843fdb1c41f0d23e87d062f3fcfe34d99ad26505ecc51ec"
+    }
+  ],
+  "runtimeRules": [
+    "Resolve every path relative to the extracted asset pack or copy it into the website public/assets directory.",
+    "Use models/puffer-jacket.glb for interactive WebGL/Three.js rendering and switch variants via KHR_materials_variants ('orange', 'olive', 'pearl') or material names ('Puffer_Orange', 'Puffer_Olive', 'Puffer_Pearl').",
+    "Use fallback/puffer-*-transparent.webp for instant LCP hero placeholder or reduced-motion/non-WebGL fallback.",
+    "Zero external API keys, remote URLs, or third-party licenses are required at runtime."
+  ]
+}

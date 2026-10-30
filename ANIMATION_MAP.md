@@ -1,0 +1,18 @@
+# Animation & Choreography Map (`ANIMATION_MAP.md`)
+
+This document catalogs every runtime animation, target element/object, trigger, duration/easing, and `prefers-reduced-motion` behavior implemented in the storefront.
+
+| ID | Animation Name | Target Element / 3D Object | Trigger | Duration & Easing | Reduced-Motion Behavior (`prefers-reduced-motion: reduce`) |
+|---|---|---|---|---|---|
+| `anim-01` | **Hero Stage Card Entrance** | `<main data-testid="product-stage-card">` (`cardRef` in `src/App.tsx`) | Initial page mount | `850 ms`, `power3.out` (`opacity: 0 -> 1`, `scale: 0.94 -> 1.0`, `y: 18 -> 0`, `clearProps: 'filter'`) | Instant static render (`opacity: 1`, `scale: 1`, `y: 0`), zero blur or motion |
+| `anim-02` | **3D Hero Jacket Entrance** | `jacketGroup.scale` & `jacketGroup.position` (`src/components/PufferJacket3DStage.tsx`) | GLB model & PBR textures loaded | `950 ms`, `back.out(1.35)` for scale (`0.89 -> 1.0`) and `power3.out` for vertical settle (`y: -0.06 -> 0`) | Instant pose at `scale(1, 1, 1)` and `position(0, 0, 0)` |
+| `anim-03` | **3D Product Idle Float** | `gltfSceneRef.current.position.y` & `rotation.z` (`src/components/PufferJacket3DStage.tsx`) | Continuous low-amplitude harmonic drift (`sin(t * 1.7) * 0.022`) | Continuous (`~3.7 s` period), smooth sine wave | Disabled (`idleFloatY = 0`, `idleRotZ = 0`), static front-facing pose |
+| `anim-04` | **Synchronized Environment & Card Palette Transition** | `envRef` (`#F5795D` → `#79642F` → `#D3ABDE`) & `cardRef` (`#D14722` → `#4A3B1C` → `#AC8FBB`) (`src/App.tsx`) | Variant selection via swatch, miniature click, keyboard `←`/`→`, or showcase loop | `650 ms`, `power2.out` | Instant hex color assignment without tweening |
+| `anim-05` | **3D Jacket Variant Transition Settle** | `jacketGroup.scale`, `jacketGroup.position.y`, `jacketGroup.rotation.y`, and PBR material swap (`Puffer_Orange`, `Puffer_Olive`, `Puffer_Pearl`) | `activeVariant.id` state change | `650–680 ms`, `back.out(1.5)` scale (`0.91 -> 1.0`) and `power3.out` rotation/position settle | Instant material swap at rest pose (`scale: 1`, `rotation: 0`) |
+| `anim-06` | **Peripheral Miniature & Orbit Line Choreography** | `topRightRef`, `bottomLeftRef`, and `orbitRef` (`src/components/PeripheralMiniatures.tsx`) | `activeVariant.id` state change | `650–750 ms`, `power3.out` (`opacity: 0 -> 1`, `scale: 0.72 -> 1.0`, directional slide settle) | Instant visibility update without slide or scale tweens |
+| `anim-07` | **Clamped Pointer Parallax & Bounded Drag Inspection** | `gltfSceneRef.current.rotation` (`±0.14 rad` parallax, `±0.75 rad` drag yaw) & `shadowMeshRef` | `pointermove` / `pointerdown` on `#hero-3d-stage`, plus `Reset View` button (`550 ms` `power3.out`) | Exponential damping (`dampFactor = 0.14`) per frame; Reset View `550 ms` `power3.out` | Parallax disabled; Reset View snaps immediately to `[0, 0, 0]` |
+| `anim-08` | **UI Button & Swatch Micro-Feedback** | Swatches, Nav Pills, Size Buttons, and `Buy Now` CTA | `:hover`, `:active`, `:focus-visible` | `150 ms` CSS transition (`transform`, `background-color`, `box-shadow`) | Instant state change (`0.01ms` via `@media (prefers-reduced-motion: reduce)`) |
+
+## Separation of 3D and DOM Transforms
+- **DOM Layer (`src/App.tsx`, `src/components/PeripheralMiniatures.tsx`):** Animates DOM container `backgroundColor`, `opacity`, and `transform` via GSAP timelines.
+- **WebGL Layer (`src/components/PufferJacket3DStage.tsx`):** Animates Three.js `THREE.Group` properties (`jacketGroup.scale`, `jacketGroup.position`, `jacketGroup.rotation`) inside the 3D scene graph. DOM and WebGL transforms never conflict on the same element.

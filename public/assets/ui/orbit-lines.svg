@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" fill="none">
+  <title>Product Hero Orbital Motion Lines</title>
+  <desc>Scalable low-contrast elliptical orbital rings and kinetic streaks for the 3D puffer jacket hero stage.</desc>
+  <defs>
+    <linearGradient id="orbitGrad1" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+      <stop offset="28%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="72%" stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="85%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(600 440) rotate(-14)">
+    <ellipse cx="0" cy="0" rx="460" ry="118" stroke="url(#orbitGrad1)" stroke-width="2.0" stroke-dasharray="1400 220"/>
+    <ellipse cx="0" cy="14" rx="510" ry="134" stroke="url(#orbitGrad2)" stroke-width="1.25" stroke-dasharray="900 380"/>
+  </g>
+  <path d="M160 510 C 390 595, 810 535, 1055 340" stroke="url(#orbitGrad1)" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M220 545 C 470 615, 845 555, 1085 385" stroke="url(#orbitGrad2)" stroke-width="1.1" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication / Original Asset Grant
+
+All 3D meshes, glTF 2.0 binary data, procedural PBR textures, HDR studio lighting maps,
+transparent fallback renders, UI SVG graphics, and JSON configuration files in this
+archive (`animated-ecommerce-3d-assets.zip`) are 100% original procedural works generated
+specifically for this project with zero third-party copyrighted or trademarked content.
+
+To the extent possible under law, the creator has waived all copyright and related or
+neighboring rights to these assets under the Creative Commons CC0 1.0 Universal dedication.
+You may copy, modify, distribute, and use all included assets for commercial and
+non-commercial purposes without attribution or royalty obligations.

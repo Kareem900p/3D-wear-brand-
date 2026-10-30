@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0",
+  "productId": "aero-puff-down-jacket-01",
+  "productTitle": "Wear your Style with Comfort",
+  "currency": "USD",
+  "defaultVariantId": "orange",
+  "sharedGeometry": {
+    "modelPath": "models/puffer-jacket.glb",
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "orientation": {
+      "upAxis": "+Y",
+      "frontAxis": "+Z",
+      "rightAxis": "+X"
+    },
+    "normalizedBoundingBox": {
+      "width": 1.6,
+      "height": 0.9569,
+      "depth": 0.643
+    }
+  },
+  "variants": [
+    {
+      "id": "orange",
+      "displayName": "Solar Coral / Orange",
+      "hexPalette": {
+        "environment": "#F5795D",
+        "card": "#D14722",
+        "primaryFabric": "#EE601A",
+        "seamShadow": "#A8340A",
+        "accentHighlight": "#FE8A42"
+      },
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-orange-transparent.webp",
+      "materialName": "Puffer_Orange",
+      "khrMaterialsVariantName": "orange",
+      "baseColorTexturePath": "textures/puffer-orange-basecolor.webp",
+      "normalTexturePath": "textures/puffer-normal.webp",
+      "ormTexturePath": "textures/puffer-orm.webp",
+      "price": 59.99,
+      "formattedPrice": "$59.99",
+      "alt": "Front view of the vivid orange insulated puffer jacket with five horizontal quilted baffles and high stand-up collar"
+    },
+    {
+      "id": "olive",
+      "displayName": "Tactical Olive / Umber",
+      "hexPalette": {
+        "environment": "#79642F",
+        "card": "#4A3B1C",
+        "primaryFabric": "#706038",
+        "seamShadow": "#42361E",
+        "accentHighlight": "#8E7C50"
+      },
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-olive-transparent.webp",
+      "materialName": "Puffer_Olive",
+      "khrMaterialsVariantName": "olive",
+      "baseColorTexturePath": "textures/puffer-olive-basecolor.webp",
+      "normalTexturePath": "textures/puffer-normal.webp",
+      "ormTexturePath": "textures/puffer-orm.webp",
+      "price": 59.99,
+      "formattedPrice": "$59.99",
+      "alt": "Front view of the muted olive-brown insulated puffer jacket with five horizontal quilted baffles and high stand-up collar"
+    },
+    {
+      "id": "pearl",
+      "displayName": "Pearl Silver / Lavender Mist",
+      "hexPalette": {
+        "environment": "#D3ABDE",
+        "card": "#AC8FBB",
+        "primaryFabric": "#DEDAE6",
+        "seamShadow": "#A29AB0",
+        "accentHighlight": "#F5F3FA"
+      },
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-pearl-transparent.webp",
+      "materialName": "Puffer_Pearl",
+      "khrMaterialsVariantName": "pearl",
+      "baseColorTexturePath": "textures/puffer-pearl-basecolor.webp",
+      "normalTexturePath": "textures/puffer-normal.webp",
+      "ormTexturePath": "textures/puffer-orm.webp",
+      "price": 59.99,
+      "formattedPrice": "$59.99",
+      "alt": "Front view of the pale pearl-silver insulated puffer jacket with five horizontal quilted baffles and high stand-up collar"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0",
+  "project": "Animated E-commerce Puffer Jacket Product Page",
+  "manifestStatus": "pending-generation-template",
+  "importantNote": "This is a requirements manifest, not evidence that these assets already exist. The second asset-generation agent must update statuses and paths to match its final delivered ZIP. Never reference pending assets from production code.",
+  "reference": {
+    "durationSeconds": 18.737098,
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "frameCount": 558
+  },
+  "variants": [
+    {
+      "id": "orange",
+      "label": "Orange",
+      "environmentHex": "#F5795D",
+      "cardHex": "#D14722",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-orange-transparent.webp",
+      "materialName": "Puffer_Orange",
+      "status": "pending-generation"
+    },
+    {
+      "id": "olive",
+      "label": "Olive / Brown",
+      "environmentHex": "#79642F",
+      "cardHex": "#4A3B1C",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-olive-transparent.webp",
+      "materialName": "Puffer_Olive",
+      "status": "pending-generation"
+    },
+    {
+      "id": "pearl",
+      "label": "Pearl / Silver",
+      "environmentHex": "#D3ABDE",
+      "cardHex": "#AC8FBB",
+      "modelPath": "models/puffer-jacket.glb",
+      "fallbackImagePath": "fallback/puffer-pearl-transparent.webp",
+      "materialName": "Puffer_Pearl",
+      "status": "pending-generation"
+    }
+  ],
+  "assets": [
+    {
+      "id": "jacket-model",
+      "path": "models/puffer-jacket.glb",
+      "kind": "glb-model",
+      "required": true,
+      "status": "pending-generation",
+      "license": "must-be-documented",
+      "notes": "A true glTF 2.0 binary mesh; never replace with a renamed image."
+    },
+    {
+      "id": "jacket-source",
+      "path": "models/puffer-jacket-source.blend",
+      "kind": "editable-source",
+      "required": false,
+      "status": "pending-generation",
+      "license": "original-or-compatible"
+    },
+    {
+      "id": "orange-fallback",
+      "path": "fallback/puffer-orange-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original-or-compatible"
+    },
+    {
+      "id": "olive-fallback",
+      "path": "fallback/puffer-olive-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original-or-compatible"
+    },
+    {
+      "id": "pearl-fallback",
+      "path": "fallback/puffer-pearl-transparent.webp",
+      "kind": "transparent-image",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original-or-compatible"
+    },
+    {
+      "id": "brand-mark",
+      "path": "ui/original-brand-mark.svg",
+      "kind": "svg",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original"
+    },
+    {
+      "id": "orbit-lines",
+      "path": "ui/orbit-lines.svg",
+      "kind": "svg",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original"
+    },
+    {
+      "id": "variant-data",
+      "path": "data/product-variants.json",
+      "kind": "json",
+      "required": true,
+      "status": "pending-generation",
+      "license": "original"
+    },
+    {
+      "id": "studio-hdr",
+      "path": "environment/studio-softbox.hdr",
+      "kind": "hdr-environment",
+      "required": false,
+      "status": "optional-not-yet-produced",
+      "license": "must-be-documented"
+    }
+  ],
+  "runtimeRules": [
+    "Resolve every path relative to the extracted asset pack or copy it into the website public/assets directory and update the manifest.",
+    "Never build a production reference to an asset whose status is pending-generation or not-produced.",
+    "If no true GLB is delivered, use the fallback images and explicitly mark the site as image-based fallback, not genuine 3D.",
+    "Copy source and license information into the main website project."
+  ]
+}
